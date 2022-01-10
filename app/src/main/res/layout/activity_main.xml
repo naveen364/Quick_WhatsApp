@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20sp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_marginBottom="8dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"/>
+
+        <com.hbb20.CountryCodePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/countryCodePicker"
+            android:gravity="center"
+            app:ccpDialog_textColor="@color/white"
+            app:ccp_contentColor="@color/white"
+            app:ccp_defaultNameCode="Ind"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20sp"
+            android:id="@+id/mobileNumber"
+            android:hint="enter mobile number"
+            android:inputType="phone"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/message"
+            android:gravity="start"
+            android:hint="enter message"
+            android:inputType="textMultiLine"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fe5f55"
+        android:text="send msg on whatsapp"
+        android:textColor="@color/white"
+        android:id="@+id/btnsend"/>
+
+</LinearLayout>
